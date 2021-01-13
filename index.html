@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="svg hide" id="svg"></div>
+        
+        <h1>My card title</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sint corrupti dicta et temporibus dolore.</p>
+        
+        <button>Get started</button>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js" integrity="sha512-0bCDSnaX8FOD9Mq8WbHcDwshXwCB5V4EP+UBu87WQgga2b7lAsuEbaSmIZjH/XEmNhJuhrPbFHemre5HZwrk9w==" crossorigin="anonymous"></script>  
+    <script>
+        const play_button = document.querySelector('button');
+        const svgContainer = document.getElementById('svg');
+        const animItem = bodymovin.loadAnimation({
+            wrapper: svgContainer,
+            animType: 'svg',
+            loop: false,
+            autoplay: false,
+            path: 'https://assets4.lottiefiles.com/datafiles/U1I3rWEyksM9cCH/data.json'
+        });
+
+        play_button.addEventListener('click', () => {
+            svgContainer.classList.remove('hide');
+            animItem.goToAndPlay(0,true);
+        });
+
+        animItem.addEventListener('complete', () => {
+            svgContainer.classList.add('hide');
+        });
+    </script>
+
+</body>
+</html>
