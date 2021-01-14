@@ -17,8 +17,9 @@ Useful links:
   ```
 
 Visual Studio Code plugins:
-* Live Sass Compiler
-* Live Server
+* Live Sass Compiler - compiles SASS/SCSS files to CSS files at realtime
+  * in this project ***css/main.scss*** file has been used to automatically modify ***css/main.css***, therefore make changes only in ***css/main.scss***
+* Live Server - local development server with live reload feature for static & dynamic pages
 
 Additional info:
 * no local copy of the repo
